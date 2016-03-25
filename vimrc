@@ -145,7 +145,8 @@ set laststatus=2
 "显示行号：
 set number
 " 取消换行。
-set nowrap
+" set nowrap
+set wrap
 
 " 括号配对情况,跳转并高亮一下匹配的括号
 set showmatch
@@ -570,6 +571,14 @@ if has("autocmd")
   endif
 endif
 
+" 80 字符提示线
+if exists('+colorcolumn')
+        set colorcolumn=80
+    else
+        " Emulate
+        au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%80v.\+', -1)
+endif
+
 "==========================================
 " Theme Settings  主题设置
 "==========================================
@@ -603,8 +612,8 @@ endif
 " theme主题
 set background=dark
 set t_Co=256
-colorscheme solarized
-" colorscheme Tomorrow-Night
+" colorscheme solarized
+colorscheme Tomorrow-Night
 " colorscheme Tomorrow-Night-Bright
 " colorscheme desert
 
