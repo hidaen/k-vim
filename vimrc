@@ -672,11 +672,14 @@ endif
 " theme主题
 set background=dark
 set t_Co=256
-colorscheme solarized
-" colorscheme Tomorrow-Night
-" colorscheme Tomorrow-Night-Bright
+" colorscheme solarized
 " colorscheme molokai
 " colorscheme desert
+" colorscheme Tomorrow
+colorscheme Tomorrow-Night
+" colorscheme Tomorrow-Night-Bright
+" colorscheme Tomorrow-Night-Blue
+" colorscheme Tomorrow-Night-Eighties
 
 
 " 设置标记一列的背景颜色和数字一行颜色一致
