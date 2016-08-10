@@ -33,6 +33,8 @@ syntax on
 " install bundles
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
+elseif filereadable(expand("~/.config/nvim/vimrc.bundles")) " neovim
+  source ~/.config/nvim/vimrc.bundles
 endif
 
 " ensure ftdetect et al work by including this after the bundle stuff
@@ -519,7 +521,7 @@ vnoremap <leader>y "+y
 " nnoremap <silent> p p`]
 
 " select all
-map <Leader>sa ggVG"
+map <Leader>sa ggVG
 
 " select block
 nnoremap <leader>v V`}
