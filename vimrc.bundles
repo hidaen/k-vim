@@ -162,6 +162,9 @@ Plug 'kana/vim-textobj-entire'
 " 增加缩进文本对象: i   dai yai cii - 相同缩进属于同一块
 Plug 'kana/vim-textobj-indent'
 
+" ###### daen add yaml plub ######
+Plug 'avakhov/vim-yaml'
+
 if count(g:bundle_groups, 'tmux')
     " tmux
     " For tmux navigator Ctrl-hjkl
@@ -892,6 +895,13 @@ endif
     " nnoremap <silent> <leader>es :Esformatter<CR>
     " vnoremap <silent> <leader>es :EsformatterVisual<CR>
 
+" }}}
+
+" ####### daen add yaml ######
+
+" yaml {{{
+"    au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent
+"    autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 " }}}
 
 "------------------------------------------- end of configs --------------------------------------------
